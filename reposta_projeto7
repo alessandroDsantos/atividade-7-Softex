@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int i, j, aux, vetor[10] = {5,2,3,6,0,8,9,7,1,4};
+    
+    printf("Sequencia Desordenada:\n");
+    for (int x = 0; x < 10; x++){
+        printf("|%d|",vetor[x]);    
+    }
+    
+    for (i = 0; i < 10; i++){
+        for (j = i + 1; j < 10; j++){
+            if(vetor[j] < vetor[i]){
+                aux = vetor[j];
+                vetor[j] = vetor[i];
+                vetor[i] = aux;
+            }
+            
+        }
+    }
+    
+    printf("\n\n");
+    printf("Sequencia Ordenada:\n");
+    for (int y = 0; y < 10; y++){
+        printf("|%d|", vetor[y]);    
+    }
+    
+
+    return 0;
+}
